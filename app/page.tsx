@@ -28,7 +28,6 @@ export default function HomePage() {
 
             <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
               <span>Bangkok</span>
-              <span>UTC+7</span>
               <span>Systems</span>
               <span>Writing</span>
             </div>

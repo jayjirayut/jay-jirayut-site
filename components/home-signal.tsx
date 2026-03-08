@@ -5,7 +5,7 @@ export function HomeSignal() {
   return (
     <figure className="hero-signal mx-auto w-full max-w-[430px] rounded-sm border border-rule bg-surface p-4 sm:p-5 lg:max-w-none">
       <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-        <span>BKK / UTC+7</span>
+        <span>Bangkok</span>
         <span>Signal / 03</span>
       </div>
 
