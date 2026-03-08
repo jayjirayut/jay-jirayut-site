@@ -39,7 +39,7 @@ export default function NowPage() {
       <section className="space-y-6">
         <SectionHeading>What I&apos;m exploring</SectionHeading>
         <p className="text-[16.5px] leading-8 text-body">
-          How AI products hold up after the demo. What makes system design trustworthy in ambiguous
+          How AI products work after the demo. What makes system design trustworthy in ambiguous
           environments. How to build a career with more autonomy and less performance.
         </p>
       </section>

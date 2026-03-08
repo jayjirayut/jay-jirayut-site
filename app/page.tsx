@@ -34,7 +34,7 @@ export default function HomePage() {
             </div>
 
             <h1 className="max-w-4xl text-[38px] font-bold leading-[1.02] tracking-[-0.08em] text-ink sm:text-[48px]">
-              I build AI systems that hold up in the real world.
+              I build AI systems that work in the real world.
             </h1>
             <p className="max-w-2xl text-[17px] leading-8 text-body">
               Based in Bangkok. Writing about AI, judgment, systems, and useful technology.
@@ -102,10 +102,6 @@ export default function HomePage() {
 
       <section className="space-y-8">
         <SectionHeading>Selected work</SectionHeading>
-        <p className="max-w-reading text-[15px] leading-7 text-body">
-          High-level by design. I care about showing how I think, not publishing client or
-          employer details.
-        </p>
         <div className="grid gap-4 md:grid-cols-2">
           {work.map((entry) => (
             <article

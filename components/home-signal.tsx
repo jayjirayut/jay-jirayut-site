@@ -1,4 +1,7 @@
 export function HomeSignal() {
+  const accent = 'var(--accent)';
+  const accentSoft = 'var(--accent-soft)';
+
   return (
     <figure className="hero-signal mx-auto w-full max-w-[430px] rounded-sm border border-rule bg-surface p-4 sm:p-5 lg:max-w-none">
       <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
@@ -20,7 +23,7 @@ export function HomeSignal() {
 
         <rect width="860" height="720" fill="#fafaf8" />
         <rect x="20" y="20" width="820" height="680" fill="url(#artifactGrid)" opacity="0.66" />
-        <circle cx="610" cy="228" r="132" fill="#4338ca" opacity="0.06" />
+        <circle cx="610" cy="228" r="132" fill={accent} opacity="0.06" />
 
         <g opacity="0.88">
           <path d="M70 128H790" stroke="#e2e1dd" strokeWidth="1" />
@@ -36,7 +39,7 @@ export function HomeSignal() {
             rx="206"
             ry="144"
             fill="none"
-            stroke="#4338ca"
+            stroke={accent}
             strokeWidth="1.4"
             strokeDasharray="12 16"
             opacity="0.72"
@@ -61,7 +64,7 @@ export function HomeSignal() {
           <path
             d="M128 500C220 502 296 478 368 426C426 384 466 334 548 318C624 302 694 318 770 366"
             fill="none"
-            stroke="#4338ca"
+            stroke={accent}
             strokeWidth="2.4"
             strokeLinecap="round"
             strokeDasharray="18 14"
@@ -82,7 +85,7 @@ export function HomeSignal() {
           <path
             d="M254 284H732"
             fill="none"
-            stroke="#4338ca"
+            stroke={accent}
             strokeOpacity="0.12"
             strokeWidth="18"
             strokeLinecap="round"
@@ -92,8 +95,8 @@ export function HomeSignal() {
         <g className="artifact-core">
           <polygon
             points="382,184 552,134 686,214 516,264"
-            fill="#eef2ff"
-            stroke="#4338ca"
+            fill={accentSoft}
+            stroke={accent}
             strokeWidth="1.4"
           />
           <polygon
@@ -121,7 +124,7 @@ export function HomeSignal() {
           <path
             d="M422 348L476 312L546 340L612 302L652 320"
             fill="none"
-            stroke="#4338ca"
+            stroke={accent}
             strokeWidth="2.4"
             strokeLinecap="round"
           />
@@ -141,30 +144,30 @@ export function HomeSignal() {
           <path d="M164 308H310" stroke="#e2e1dd" strokeWidth="1.2" />
           <path d="M164 348H310" stroke="#e2e1dd" strokeWidth="1.2" />
           <path d="M164 388H310" stroke="#e2e1dd" strokeWidth="1.2" />
-          <path d="M198 255L270 255" stroke="#4338ca" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M198 255L270 255" stroke={accent} strokeWidth="2.4" strokeLinecap="round" />
           <path d="M198 295L286 295" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" opacity="0.76" />
-          <path d="M198 335L250 335" stroke="#4338ca" strokeWidth="1.8" strokeLinecap="round" opacity="0.82" />
+          <path d="M198 335L250 335" stroke={accent} strokeWidth="1.8" strokeLinecap="round" opacity="0.82" />
           <path d="M198 375L284 375" stroke="#111111" strokeWidth="1.8" strokeLinecap="round" opacity="0.58" />
-          <path d="M198 415L246 415" stroke="#4338ca" strokeWidth="1.8" strokeLinecap="round" opacity="0.74" />
-          <circle cx="236" cy="455" r="7" fill="#4338ca" />
+          <path d="M198 415L246 415" stroke={accent} strokeWidth="1.8" strokeLinecap="round" opacity="0.74" />
+          <circle cx="236" cy="455" r="7" fill={accent} />
         </g>
 
         <g className="signal-pulse" style={{ animationDelay: '0s' }}>
-          <circle cx="236" cy="455" r="22" fill="none" stroke="#4338ca" strokeWidth="1.4" opacity="0.42" />
+          <circle cx="236" cy="455" r="22" fill="none" stroke={accent} strokeWidth="1.4" opacity="0.42" />
         </g>
         <g className="signal-pulse" style={{ animationDelay: '0.9s' }}>
-          <circle cx="546" cy="340" r="18" fill="none" stroke="#4338ca" strokeWidth="1.4" opacity="0.34" />
+          <circle cx="546" cy="340" r="18" fill="none" stroke={accent} strokeWidth="1.4" opacity="0.34" />
         </g>
         <g className="signal-pulse" style={{ animationDelay: '1.6s' }}>
           <circle cx="612" cy="352" r="14" fill="none" stroke="#111111" strokeWidth="1.2" opacity="0.24" />
         </g>
 
         {[
-          [546, 340, '#4338ca'],
+          [546, 340, accent],
           [612, 352, '#111111'],
-          [652, 320, '#4338ca'],
+          [652, 320, accent],
           [612, 302, '#111111'],
-          [552, 134, '#4338ca'],
+          [552, 134, accent],
           [636, 184, '#111111']
         ].map(([cx, cy, fill]) => (
           <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="5.5" fill={fill as string} />
@@ -210,7 +213,7 @@ export function HomeSignal() {
           letterSpacing="3"
           textAnchor="end"
         >
-          BUILT TO HOLD
+          BUILT TO WORK
         </text>
       </svg>
 

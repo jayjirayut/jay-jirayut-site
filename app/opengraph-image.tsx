@@ -42,7 +42,7 @@ export default function OpenGraphImage() {
               fontWeight: 700
             }}
           >
-            I build AI systems that hold up in the real world.
+            I build AI systems that work in the real world.
           </div>
           <div
             style={{
