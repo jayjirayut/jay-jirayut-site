@@ -47,7 +47,7 @@ export default function NowPage() {
       <section className="space-y-6">
         <SectionHeading>What I&apos;m reading / listening to</SectionHeading>
         <p className="text-[16.5px] leading-8 text-body">
-          Long-form essays on technology and institutions. Design writing that respects restraint.
+          Long-form essays on technology and institutions. Design writing that values simplicity.
           Music that helps me think in clean lines instead of noise.
         </p>
       </section>
