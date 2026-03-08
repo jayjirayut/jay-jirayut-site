@@ -8,7 +8,7 @@ export const siteConfig = {
   shortName: 'Jay Jirayut',
   title: 'Jay Jirayut Chatphet — AI, Systems, Writing',
   description:
-    'Bangkok-based AI systems builder writing about systems, judgment, useful technology, and the future of work.',
+    'AI systems builder writing about judgment, useful technology, and the future of work.',
   url: defaultSiteUrl,
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'jay.jirayut@gmail.com',
   location: 'Bangkok, Thailand'

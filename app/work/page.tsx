@@ -26,8 +26,8 @@ export default function WorkIndexPage() {
         </h1>
         <p className="text-[16.5px] leading-8 text-body">
           I&apos;m most useful when the work is ambiguous, cross-functional, technical, and
-          commercially real. I keep this section focused on judgment and operating principles, not
-          confidential details from client or employer work.
+          commercially consequential. This section stays focused on judgment and operating
+          principles, not confidential specifics.
         </p>
       </header>
 

@@ -31,10 +31,10 @@ export default function AboutPage() {
       <section className="space-y-5">
         <SectionHeading>Short bio</SectionHeading>
         <p className="text-[16.5px] leading-8 text-body">
-          I&apos;m a Bangkok-based AI systems builder working at the intersection of product
-          judgment, technical depth, and execution. I&apos;ve spent the last several years building
-          AI and data systems inside a real operating business, with work that had to survive
-          constraints instead of presentations.
+          I build AI systems at the intersection of product judgment, technical depth, and
+          execution. I&apos;ve spent the last several years building AI and data systems inside a
+          real operating business, with work that had to survive constraints instead of
+          presentations.
         </p>
       </section>
 

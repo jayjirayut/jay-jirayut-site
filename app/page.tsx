@@ -27,7 +27,7 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-              <span>Bangkok</span>
+              <span>AI</span>
               <span>Systems</span>
               <span>Writing</span>
             </div>
@@ -62,8 +62,8 @@ export default function HomePage() {
               </a>
             </div>
             <p className="max-w-2xl text-[15px] leading-7 text-body">
-              Built from Bangkok, not borrowed from the Bay. I care about systems with taste,
-              restraint, and enough honesty to survive outside the launch cycle.
+              Not borrowed from the Bay. I care about work with taste, restraint, and enough
+              honesty to survive outside the launch cycle.
             </p>
           </div>
 

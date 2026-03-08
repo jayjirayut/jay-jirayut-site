@@ -5,7 +5,7 @@ export function HomeSignal() {
   return (
     <figure className="hero-signal mx-auto w-full max-w-[430px] rounded-sm border border-rule bg-surface p-4 sm:p-5 lg:max-w-none">
       <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-        <span>Bangkok</span>
+        <span>Field study</span>
         <span>Signal / 03</span>
       </div>
 
@@ -181,7 +181,7 @@ export function HomeSignal() {
           fontFamily="monospace"
           letterSpacing="5"
         >
-          BANGKOK / REAL SYSTEMS
+          REAL SYSTEMS / FIELD NOTES
         </text>
         <text
           x="128"
@@ -191,7 +191,7 @@ export function HomeSignal() {
           fontFamily="monospace"
           letterSpacing="3"
         >
-          SEA / JUDGMENT / EXECUTION
+          JUDGMENT / EXECUTION
         </text>
         <text
           x="730"

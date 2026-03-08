@@ -8,7 +8,7 @@ import { absoluteUrl, formatDate } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Writing',
-  description: 'Writing about AI, judgment, systems, and useful technology.',
+  description: 'Writing on AI, judgment, and useful technology.',
   alternates: {
     canonical: absoluteUrl('/writing')
   }
