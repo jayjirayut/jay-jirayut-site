@@ -69,17 +69,6 @@ img {
   animation: page-fade 0.3s ease-out;
 }
 
-@keyframes signal-float {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    transform: translate3d(0, -8px, 0);
-  }
-}
-
 @keyframes signal-rotate {
   from {
     transform: rotate(0deg);
@@ -93,21 +82,13 @@ img {
 @keyframes signal-pulse {
   0%,
   100% {
-    opacity: 0.35;
+    opacity: 0.28;
+    transform: scale(0.94);
   }
 
   50% {
     opacity: 1;
-  }
-}
-
-@keyframes signal-dash {
-  from {
-    stroke-dashoffset: 0;
-  }
-
-  to {
-    stroke-dashoffset: -240;
+    transform: scale(1.04);
   }
 }
 
@@ -115,17 +96,34 @@ img {
   0%,
   100% {
     transform: translate3d(0, 0, 0);
-    opacity: 0.16;
+    opacity: 0.12;
   }
 
   50% {
-    transform: translate3d(0, -16px, 0);
-    opacity: 0.28;
+    transform: translate3d(0, -12px, 0);
+    opacity: 0.2;
   }
 }
 
-.hero-signal {
-  animation: signal-float 14s ease-in-out infinite;
+@keyframes signal-core {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-4px, 3px, 0);
+  }
+}
+
+@keyframes signal-drift {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -180;
+  }
 }
 
 .hero-signal .signal-orbit {
@@ -141,20 +139,26 @@ img {
   animation: signal-rotate 34s linear infinite reverse;
 }
 
-.hero-signal .signal-trace {
-  animation: signal-dash 16s linear infinite;
-}
-
-.hero-signal .signal-trace--slow {
-  animation-duration: 24s;
-}
-
 .hero-signal .signal-pulse {
   animation: signal-pulse 5.8s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
 }
 
 .hero-signal .signal-sweep {
   animation: signal-sweep 9s ease-in-out infinite;
+}
+
+.hero-signal .artifact-core {
+  animation: signal-core 16s ease-in-out infinite;
+}
+
+.hero-signal .signal-drift path {
+  animation: signal-drift 20s linear infinite;
+}
+
+.hero-signal .signal-drift path:last-child {
+  animation-duration: 27s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -162,10 +166,10 @@ img {
   .hero-signal,
   .hero-signal .signal-orbit--one,
   .hero-signal .signal-orbit--two,
-  .hero-signal .signal-trace,
-  .hero-signal .signal-trace--slow,
   .hero-signal .signal-pulse,
-  .hero-signal .signal-sweep {
+  .hero-signal .signal-sweep,
+  .hero-signal .artifact-core,
+  .hero-signal .signal-drift path {
     animation: none;
   }
 }

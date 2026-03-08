@@ -56,7 +56,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <body className="bg-bg font-sans text-[16px] text-body">
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
-          <main className="page-shell flex-1 px-5 pb-20 pt-32 sm:px-8 sm:pt-28">{children}</main>
+          <main className="page-shell flex-1 px-5 pb-20 pt-36 sm:px-8 sm:pt-28">{children}</main>
           <SiteFooter />
         </div>
       </body>

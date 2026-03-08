@@ -20,7 +20,7 @@ export default function HomePage() {
   return (
     <Container size="shell" className="space-y-20 sm:space-y-24">
       <section className="border-b border-rule pb-16 sm:pb-20">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:items-end">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:items-end lg:gap-12">
           <div className="max-w-3xl space-y-6">
             <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-muted">
               {siteConfig.name}
@@ -39,6 +39,9 @@ export default function HomePage() {
             <p className="max-w-2xl text-[17px] leading-8 text-body">
               Based in Bangkok. Writing about AI, judgment, systems, and useful technology.
             </p>
+            <div className="lg:hidden">
+              <HomeSignal />
+            </div>
             <div className="flex flex-wrap gap-x-5 gap-y-3 pt-2 text-[15px] text-body">
               <Link
                 href="/writing"
@@ -59,9 +62,15 @@ export default function HomePage() {
                 Get in touch
               </a>
             </div>
+            <p className="max-w-2xl text-[15px] leading-7 text-body">
+              Built from Bangkok, not borrowed from the Bay. I care about systems with taste,
+              restraint, and enough honesty to survive outside the launch cycle.
+            </p>
           </div>
 
-          <HomeSignal />
+          <div className="hidden lg:block">
+            <HomeSignal />
+          </div>
         </div>
       </section>
 
