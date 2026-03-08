@@ -40,7 +40,7 @@ export default function NowPage() {
         <SectionHeading>What I&apos;m exploring</SectionHeading>
         <p className="text-[16.5px] leading-8 text-body">
           How AI products work after the demo. What makes system design trustworthy in ambiguous
-          environments. How to build a career with more autonomy and less performance.
+          environments. How to build a career with more autonomy and less image management.
         </p>
       </section>
 

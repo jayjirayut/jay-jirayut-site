@@ -22,7 +22,7 @@ export default function WritingIndexPage() {
       <header className="space-y-5 border-b border-rule pb-10">
         <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-muted">Writing</p>
         <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[46px]">
-          Writing that starts from reality, not performance.
+          Writing grounded in real work, not hype.
         </h1>
         <p className="max-w-2xl text-[16.5px] leading-8 text-body">
           Essays on useful AI, making decisions under constraint, and why clarity still matters
