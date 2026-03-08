@@ -8,7 +8,7 @@ import { absoluteUrl, formatDate } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Work',
-  description: 'Selected notes on work, judgment, and system design.',
+  description: 'Selected notes on work, decision-making, and system design.',
   alternates: {
     canonical: absoluteUrl('/work')
   }
@@ -26,8 +26,8 @@ export default function WorkIndexPage() {
         </h1>
         <p className="text-[16.5px] leading-8 text-body">
           I&apos;m most useful when the work is ambiguous, cross-functional, technical, and
-          commercially consequential. This section stays focused on judgment and operating
-          principles, not confidential specifics.
+          commercially real. This section stays focused on how decisions get made and what
+          principles guide the work, not confidential specifics.
         </p>
       </header>
 

@@ -8,7 +8,7 @@ import { absoluteUrl, formatDate } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Writing',
-  description: 'Writing on AI, judgment, and useful technology.',
+  description: 'Writing on AI, decision-making, and useful technology.',
   alternates: {
     canonical: absoluteUrl('/writing')
   }
@@ -25,8 +25,8 @@ export default function WritingIndexPage() {
           Writing that starts from reality, not performance.
         </h1>
         <p className="max-w-2xl text-[16.5px] leading-8 text-body">
-          Essays on useful AI, judgment under constraint, and why clarity still matters when the
-          subject gets noisy.
+          Essays on useful AI, making decisions under constraint, and why clarity still matters
+          when the subject gets noisy.
         </p>
       </header>
 

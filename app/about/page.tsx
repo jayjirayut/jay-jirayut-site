@@ -6,7 +6,7 @@ import { absoluteUrl } from '@/lib/site';
 
 const principles = [
   'Useful beats impressive.',
-  'Judgment matters when the data is incomplete.',
+  'How you decide matters when the data is incomplete.',
   'AI should make people more human, not less.',
   'Clarity is a competitive advantage.',
   "Most claims in my industry are inflated. I won't make them."
@@ -31,10 +31,9 @@ export default function AboutPage() {
       <section className="space-y-5">
         <SectionHeading>Short bio</SectionHeading>
         <p className="text-[16.5px] leading-8 text-body">
-          I build AI systems at the intersection of product judgment, technical depth, and
-          execution. I&apos;ve spent the last several years building AI and data systems inside a
-          real operating business, with work that had to survive constraints instead of
-          presentations.
+          I build AI systems where product decisions, technical depth, and execution all have to
+          line up. I&apos;ve spent the last several years building AI and data systems inside a real
+          operating business, with work that had to survive constraints instead of presentations.
         </p>
       </section>
 

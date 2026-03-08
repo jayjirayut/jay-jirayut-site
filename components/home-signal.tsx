@@ -191,7 +191,7 @@ export function HomeSignal() {
           fontFamily="monospace"
           letterSpacing="3"
         >
-          JUDGMENT / EXECUTION
+          DECISIONS / EXECUTION
         </text>
         <text
           x="730"
@@ -218,7 +218,7 @@ export function HomeSignal() {
       </svg>
 
       <div className="mt-4 flex items-center justify-between border-t border-rule pt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-        <span>AI / systems / judgment</span>
+        <span>AI / systems / decisions</span>
         <span>Hand-built visual</span>
       </div>
     </figure>

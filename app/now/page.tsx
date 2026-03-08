@@ -30,9 +30,9 @@ export default function NowPage() {
       <section className="space-y-6">
         <SectionHeading>What I&apos;m focused on</SectionHeading>
         <p className="text-[16.5px] leading-8 text-body">
-          Building a more durable public body of work around AI systems, judgment, and where useful
-          technology still beats impressive theatre. I&apos;m also getting this site into a shape
-          that I&apos;d feel comfortable sending to smart people without explaining it first.
+          Building a more durable public body of work around AI systems, decision-making, and why
+          useful technology still beats impressive theatre. I&apos;m also getting this site into a
+          shape that I&apos;d feel comfortable sending to smart people without explaining it first.
         </p>
       </section>
 
