@@ -51,7 +51,8 @@ export default function OpenGraphImage() {
               color: '#3d3d3d'
             }}
           >
-            Based in Bangkok. Writing about AI, judgment, systems, and useful technology.
+            Based in Bangkok. I write about building AI, making better decisions, and
+            technology people can actually use.
           </div>
         </div>
         <div

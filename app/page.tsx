@@ -9,9 +9,18 @@ import { getWorkEntries, getWritingEntries } from '@/lib/content';
 import { siteConfig, formatDate } from '@/lib/site';
 
 const talks = [
-  'Secret Sauce EP.591 / 1.41M subscriber channel',
-  'MFA Panel / Slush 2025 debrief / January 2026',
-  'Available for / AI that makes us more human'
+  {
+    label: 'Secret Sauce EP.591 / THE STANDARD PODCAST',
+    href: 'https://soundcloud.com/thestandardpodcast/tss591'
+  },
+  {
+    label: 'MFA Panel / Slush 2025 debrief / January 2026',
+    href: 'https://slush.org/'
+  },
+  {
+    label: 'Available for / AI that makes us more human',
+    href: '#contact'
+  }
 ];
 
 export default function HomePage() {
@@ -37,7 +46,8 @@ export default function HomePage() {
               I build AI systems that work in the real world.
             </h1>
             <p className="max-w-2xl text-[17px] leading-8 text-body">
-              Based in Bangkok. Writing about AI, judgment, systems, and useful technology.
+              Based in Bangkok. I write about building AI, making better decisions, and
+              technology people can actually use.
             </p>
             <div className="lg:hidden">
               <HomeSignal />
@@ -129,8 +139,15 @@ export default function HomePage() {
         <SectionHeading>Talks / appearances</SectionHeading>
         <ul className="space-y-4 border-y border-rule py-6">
           {talks.map((item) => (
-            <li key={item} className="text-[16px] leading-7 text-body">
-              {item}
+            <li key={item.label} className="text-[16px] leading-7 text-body">
+              <a
+                href={item.href}
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
+                className="transition-colors duration-200 hover:text-accent hover:underline hover:underline-offset-4"
+              >
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
