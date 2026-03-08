@@ -67,9 +67,17 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             }}
           />
         ) : null}
-        <div className="relative flex min-h-screen flex-col">
+        <div
+          aria-hidden
+          className="pointer-events-none fixed inset-0 z-0 hidden lg:block"
+        >
+          <div className="mx-auto h-full max-w-[72rem] border-x border-rule opacity-80" />
+        </div>
+        <div className="relative z-10 flex min-h-screen flex-col">
           <SiteHeader />
-          <main className="page-shell flex-1 px-5 pb-20 pt-36 sm:px-8 sm:pt-28">{children}</main>
+          <main className="page-shell flex-1 px-5 pb-24 pt-36 sm:px-8 sm:pt-28 lg:px-10">
+            {children}
+          </main>
           <SiteFooter />
         </div>
         {DevThemeToggle ? <DevThemeToggle /> : null}

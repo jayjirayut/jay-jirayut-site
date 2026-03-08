@@ -66,21 +66,23 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
   });
 
   return (
-    <Container size="reading" className="space-y-12">
-      <header className="space-y-6 border-b border-rule pb-10">
+    <Container size="shell" className="space-y-12">
+      <header className="max-w-reading space-y-6 border-b border-rule pb-10">
+        <p className="section-kicker">Work note</p>
         <MetadataLine items={[formatDate(entry.date), ...entry.tags]} />
-        <h1 className="text-[40px] font-bold leading-[1.05] tracking-[-0.08em] text-ink sm:text-[46px]">
+        <h1 className="text-[40px] font-bold leading-[1.02] tracking-[-0.08em] text-ink sm:text-[48px]">
           {entry.title}
         </h1>
-        <p className="text-[16.5px] leading-8 text-body">{entry.description}</p>
+        <p className="max-w-2xl text-[16.5px] leading-8 text-body">{entry.description}</p>
       </header>
 
-      <article>{content}</article>
+      <article className="editorial-prose">{content}</article>
 
-      <nav className="border-t border-rule pt-8 text-[14px] text-body">
+      <nav className="border-t border-rule pt-8">
         <Link
           href="/work"
-          className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
+          className="surface-panel inline-flex p-5 text-[18px] tracking-[-0.04em] text-ink"
+          data-static="true"
         >
           Back to work
         </Link>

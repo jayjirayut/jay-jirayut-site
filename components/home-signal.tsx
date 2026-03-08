@@ -3,10 +3,10 @@ export function HomeSignal() {
   const accentSoft = 'var(--accent-soft)';
 
   return (
-    <figure className="hero-signal mx-auto w-full max-w-[430px] rounded-sm border border-rule bg-surface p-4 sm:p-5 lg:max-w-none">
+    <figure className="hero-signal surface-panel mx-auto w-full max-w-[470px] overflow-hidden p-4 sm:p-5 lg:max-w-none">
       <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-        <span>Field study</span>
-        <span>Signal / 03</span>
+        <span>System map</span>
+        <span>March 2026</span>
       </div>
 
       <svg
@@ -181,7 +181,7 @@ export function HomeSignal() {
           fontFamily="monospace"
           letterSpacing="5"
         >
-          REAL SYSTEMS / FIELD NOTES
+          REAL-WORLD AI / FIELD NOTES
         </text>
         <text
           x="128"
@@ -202,7 +202,7 @@ export function HomeSignal() {
           letterSpacing="4"
           textAnchor="end"
         >
-          NOT A DEMO
+          BUILT FOR REAL USE
         </text>
         <text
           x="730"
@@ -213,12 +213,12 @@ export function HomeSignal() {
           letterSpacing="3"
           textAnchor="end"
         >
-          BUILT TO WORK
+          HAND-BUILT VISUAL
         </text>
       </svg>
 
       <div className="mt-4 flex items-center justify-between border-t border-rule pt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-        <span>AI / systems / decisions</span>
+        <span>AI systems and writing</span>
         <span>Hand-built visual</span>
       </div>
     </figure>

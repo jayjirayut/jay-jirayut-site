@@ -30,7 +30,7 @@ export const mdxComponents: MDXComponents = {
     );
   },
   h2: ({ children }) => (
-    <h2 className="mt-16 text-[24px] font-semibold tracking-[-0.06em] text-ink sm:text-[28px]">
+    <h2 className="mt-16 border-t border-rule pt-5 text-[24px] font-semibold tracking-[-0.06em] text-ink sm:text-[28px]">
       {children}
     </h2>
   ),

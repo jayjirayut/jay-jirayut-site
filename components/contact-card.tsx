@@ -36,35 +36,38 @@ export function ContactCard({ email }: ContactCardProps) {
   }
 
   return (
-    <div className="rounded-sm border border-rule bg-surface p-5 sm:p-6">
-      <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Contact</p>
+    <div className="surface-panel p-5 sm:p-6" data-static="true">
+      <div className="flex items-center justify-between border-b border-rule pb-4">
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Email</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">No form</p>
+      </div>
 
-      <p className="mt-4 break-all text-[18px] leading-7 tracking-[-0.03em] text-ink">{email}</p>
+      <p className="mt-5 break-all text-[20px] leading-8 tracking-[-0.04em] text-ink">{email}</p>
 
-      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-[14px]">
+      <div className="mt-5 flex flex-wrap gap-3 text-[14px]">
         <button
           type="button"
           onClick={handleCopy}
-          className="bg-transparent p-0 text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
+          className="rounded-sm border border-rule px-3 py-2 text-accent transition-colors duration-200 hover:border-accent hover:underline hover:underline-offset-4"
         >
           {status === 'copied' ? 'Email copied' : 'Copy email'}
         </button>
 
         <a
           href={`mailto:${email}`}
-          className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
+          className="rounded-sm border border-rule px-3 py-2 text-accent transition-colors duration-200 hover:border-accent hover:underline hover:underline-offset-4"
         >
           Open mail app
         </a>
       </div>
 
-      <p className="mt-3 text-[14px] leading-6 text-body">
-        Best for advisory, speaking, or collaboration.
+      <p className="mt-4 max-w-md text-[15px] leading-7 text-body">
+        Best for advisory, speaking, or collaboration. Clear email beats a contact form.
       </p>
 
       <p
         aria-live="polite"
-        className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted"
+        className="mt-5 font-mono text-[11px] uppercase tracking-[0.18em] text-muted"
       >
         {status === 'copied' && 'Copied to clipboard'}
         {status === 'failed' && 'Copy unavailable on this device'}

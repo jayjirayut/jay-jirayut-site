@@ -12,7 +12,7 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-rule bg-bg">
+    <header className="site-header-surface fixed inset-x-0 top-0 z-50 border-b border-rule">
       <Container
         as="div"
         size="shell"
@@ -20,13 +20,13 @@ export function SiteHeader() {
       >
         <Link
           href="/"
-          className="pr-4 text-[15px] font-medium tracking-[-0.02em] text-ink transition-colors duration-200 hover:text-accent"
+          className="pr-4 text-[15px] font-medium tracking-[-0.03em] text-ink transition-colors duration-200 hover:text-accent"
         >
           {siteConfig.shortName}
         </Link>
 
         <nav aria-label="Primary">
-          <ul className="flex flex-col items-end gap-y-1 text-right text-[13px] text-body sm:flex-row sm:flex-wrap sm:justify-end sm:gap-x-4 sm:gap-y-2 sm:text-[14px]">
+          <ul className="flex flex-col items-end gap-y-1 text-right text-[13px] text-body sm:flex-row sm:flex-wrap sm:justify-end sm:gap-x-5 sm:gap-y-2 sm:text-[14px]">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link

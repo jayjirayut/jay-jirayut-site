@@ -88,45 +88,54 @@ export default async function WritingPostPage({ params }: WritingPageProps) {
   };
 
   return (
-    <Container size="reading" className="space-y-12">
+    <Container size="shell" className="space-y-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="space-y-6 border-b border-rule pb-10">
+      <header className="max-w-reading space-y-6 border-b border-rule pb-10">
+        <p className="section-kicker">Essay</p>
         <MetadataLine items={[formatDate(entry.date), entry.readingTime]} />
-        <h1 className="text-[40px] font-bold leading-[1.05] tracking-[-0.08em] text-ink sm:text-[46px]">
+        <h1 className="text-[40px] font-bold leading-[1.02] tracking-[-0.08em] text-ink sm:text-[48px]">
           {entry.title}
         </h1>
-        <p className="text-[16.5px] leading-8 text-body">{entry.description}</p>
+        <p className="max-w-2xl text-[16.5px] leading-8 text-body">{entry.description}</p>
       </header>
 
-      <article>{content}</article>
+      <article className="editorial-prose">{content}</article>
 
-      <nav className="flex flex-col gap-4 border-t border-rule pt-8 text-[14px] text-body sm:flex-row sm:items-center sm:justify-between">
+      <nav className="grid gap-4 border-t border-rule pt-8 sm:grid-cols-2">
         <Link
           href="/writing"
-          className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
+          className="surface-panel flex h-full flex-col justify-between p-5"
+          data-static="true"
         >
-          Back to writing
+          <span className="section-kicker">Back</span>
+          <span className="mt-3 text-[18px] tracking-[-0.04em] text-ink">All writing</span>
         </Link>
 
-        <div className="flex flex-col gap-3 sm:items-end">
+        <div className="grid gap-4">
           {newer ? (
             <Link
               href={`/writing/${newer.slug}`}
-              className="transition-colors duration-200 hover:text-accent"
+              className="surface-panel flex h-full flex-col justify-between p-5"
             >
-              Newer / {newer.title}
+              <span className="section-kicker">Newer</span>
+              <span className="mt-3 text-[18px] leading-7 tracking-[-0.04em] text-ink">
+                {newer.title}
+              </span>
             </Link>
           ) : null}
           {older ? (
             <Link
               href={`/writing/${older.slug}`}
-              className="transition-colors duration-200 hover:text-accent"
+              className="surface-panel flex h-full flex-col justify-between p-5"
             >
-              Older / {older.title}
+              <span className="section-kicker">Older</span>
+              <span className="mt-3 text-[18px] leading-7 tracking-[-0.04em] text-ink">
+                {older.title}
+              </span>
             </Link>
           ) : null}
         </div>
