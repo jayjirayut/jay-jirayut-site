@@ -1,11 +1,16 @@
+const defaultSiteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : 'https://jay-jirayut-site.vercel.app');
+
 export const siteConfig = {
   name: 'Jay Jirayut Chatphet',
   shortName: 'Jay Jirayut',
   title: 'Jay Jirayut Chatphet — AI, Systems, Writing',
   description:
-    'Bangkok-based AI and product leader writing about systems, judgment, useful technology, and the future of work.',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://jirayut.com',
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'jay@jirayut.com',
+    'Bangkok-based AI systems builder writing about systems, judgment, useful technology, and the future of work.',
+  url: defaultSiteUrl,
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'jay.jirayut@gmail.com',
   location: 'Bangkok, Thailand'
 };
 

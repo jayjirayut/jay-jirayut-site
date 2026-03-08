@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { Container } from '@/components/container';
+import { HomeSignal } from '@/components/home-signal';
 import { MetadataLine } from '@/components/metadata-line';
 import { SectionHeading } from '@/components/section-heading';
 import { getWorkEntries, getWritingEntries } from '@/lib/content';
@@ -17,38 +18,50 @@ export default function HomePage() {
   const work = getWorkEntries().slice(0, 2);
 
   return (
-    <Container size="shell" className="space-y-24">
-      <section className="border-b border-rule pb-16">
-        <div className="max-w-3xl space-y-6">
-          <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-muted">
-            {siteConfig.name}
-          </p>
-          <h1 className="max-w-4xl text-[40px] font-bold leading-[1.02] tracking-[-0.08em] text-ink sm:text-[48px]">
-            I build AI systems that hold up in the real world.
-          </h1>
-          <p className="max-w-2xl text-[17px] leading-8 text-body">
-            Based in Bangkok. Writing about AI, judgment, systems, and useful technology.
-          </p>
-          <div className="flex flex-wrap gap-x-5 gap-y-3 pt-4 text-[15px] text-body">
-            <Link
-              href="/writing"
-              className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
-            >
-              Read writing
-            </Link>
-            <Link
-              href="/work"
-              className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
-            >
-              View work
-            </Link>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
-            >
-              Get in touch
-            </a>
+    <Container size="shell" className="space-y-20 sm:space-y-24">
+      <section className="border-b border-rule pb-16 sm:pb-20">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:items-end">
+          <div className="max-w-3xl space-y-6">
+            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-muted">
+              {siteConfig.name}
+            </p>
+
+            <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+              <span>Bangkok</span>
+              <span>UTC+7</span>
+              <span>Systems</span>
+              <span>Writing</span>
+            </div>
+
+            <h1 className="max-w-4xl text-[38px] font-bold leading-[1.02] tracking-[-0.08em] text-ink sm:text-[48px]">
+              I build AI systems that hold up in the real world.
+            </h1>
+            <p className="max-w-2xl text-[17px] leading-8 text-body">
+              Based in Bangkok. Writing about AI, judgment, systems, and useful technology.
+            </p>
+            <div className="flex flex-wrap gap-x-5 gap-y-3 pt-2 text-[15px] text-body">
+              <Link
+                href="/writing"
+                className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
+              >
+                Read writing
+              </Link>
+              <Link
+                href="/work"
+                className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
+              >
+                View work
+              </Link>
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
+              >
+                Get in touch
+              </a>
+            </div>
           </div>
+
+          <HomeSignal />
         </div>
       </section>
 
@@ -80,6 +93,10 @@ export default function HomePage() {
 
       <section className="space-y-8">
         <SectionHeading>Selected work</SectionHeading>
+        <p className="max-w-reading text-[15px] leading-7 text-body">
+          High-level by design. I care about showing how I think, not publishing client or
+          employer details.
+        </p>
         <div className="grid gap-4 md:grid-cols-2">
           {work.map((entry) => (
             <article
@@ -97,7 +114,7 @@ export default function HomePage() {
                 href={`/work/${entry.slug}`}
                 className="mt-6 text-[14px] text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
               >
-                Read case study
+                Read note
               </Link>
             </article>
           ))}

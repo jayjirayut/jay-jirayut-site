@@ -42,9 +42,9 @@ export default function AboutPage() {
         <SectionHeading>Story</SectionHeading>
         <p className="text-[16.5px] leading-8 text-body">
           I built AI and data capability from zero inside a startup environment and stayed long
-          enough to see what real deployment does to theory. The work touched hotels, malls, and
-          government buildings across Southeast Asia. I chose environments where the stakes were
-          real and the feedback loop was unforgiving, even when safer paths were available.
+          enough to see what real deployment does to theory. The work touched complex operating
+          environments across Southeast Asia. I chose environments where the stakes were real and
+          the feedback loop was unforgiving, even when safer paths were available.
         </p>
       </section>
 

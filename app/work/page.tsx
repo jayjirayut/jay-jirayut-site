@@ -8,7 +8,7 @@ import { absoluteUrl, formatDate } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Work',
-  description: 'Selected cases where judgment mattered.',
+  description: 'Selected notes on work, judgment, and system design.',
   alternates: {
     canonical: absoluteUrl('/work')
   }
@@ -22,11 +22,12 @@ export default function WorkIndexPage() {
       <header className="max-w-reading space-y-5 border-b border-rule pb-10">
         <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-muted">Work</p>
         <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[46px]">
-          Judgment matters most when the work is commercially real.
+          Selected work, kept deliberately high-level.
         </h1>
         <p className="text-[16.5px] leading-8 text-body">
           I&apos;m most useful when the work is ambiguous, cross-functional, technical, and
-          commercially real. These are selected cases where judgment mattered.
+          commercially real. I keep this section focused on judgment and operating principles, not
+          confidential details from client or employer work.
         </p>
       </header>
 
@@ -47,7 +48,7 @@ export default function WorkIndexPage() {
               href={`/work/${entry.slug}`}
               className="mt-6 text-[14px] text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
             >
-              Read case study
+              Read note
             </Link>
           </article>
         ))}

@@ -16,17 +16,17 @@ export function SiteHeader() {
       <Container
         as="div"
         size="shell"
-        className="flex flex-col gap-4 px-6 py-5 backdrop-blur-[2px] sm:flex-row sm:items-center sm:justify-between sm:px-8"
+        className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4 gap-y-3 px-5 py-4 backdrop-blur-[2px] sm:flex sm:items-center sm:justify-between sm:px-8"
       >
         <Link
           href="/"
-          className="text-[15px] font-medium tracking-[-0.02em] text-ink transition-colors duration-200 hover:text-accent"
+          className="pr-4 text-[15px] font-medium tracking-[-0.02em] text-ink transition-colors duration-200 hover:text-accent"
         >
           {siteConfig.shortName}
         </Link>
 
         <nav aria-label="Primary">
-          <ul className="flex flex-col gap-2 text-[14px] text-body sm:flex-row sm:flex-wrap sm:justify-end sm:gap-x-4 sm:gap-y-2">
+          <ul className="grid grid-cols-2 gap-x-5 gap-y-1 text-right text-[13px] text-body sm:flex sm:flex-wrap sm:justify-end sm:gap-x-4 sm:gap-y-2 sm:text-[14px]">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link

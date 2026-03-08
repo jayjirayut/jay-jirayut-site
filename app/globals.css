@@ -68,3 +68,104 @@ img {
 .page-shell {
   animation: page-fade 0.3s ease-out;
 }
+
+@keyframes signal-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+@keyframes signal-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes signal-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes signal-dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+@keyframes signal-sweep {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.16;
+  }
+
+  50% {
+    transform: translate3d(0, -16px, 0);
+    opacity: 0.28;
+  }
+}
+
+.hero-signal {
+  animation: signal-float 14s ease-in-out infinite;
+}
+
+.hero-signal .signal-orbit {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hero-signal .signal-orbit--one {
+  animation: signal-rotate 26s linear infinite;
+}
+
+.hero-signal .signal-orbit--two {
+  animation: signal-rotate 34s linear infinite reverse;
+}
+
+.hero-signal .signal-trace {
+  animation: signal-dash 16s linear infinite;
+}
+
+.hero-signal .signal-trace--slow {
+  animation-duration: 24s;
+}
+
+.hero-signal .signal-pulse {
+  animation: signal-pulse 5.8s ease-in-out infinite;
+}
+
+.hero-signal .signal-sweep {
+  animation: signal-sweep 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-shell,
+  .hero-signal,
+  .hero-signal .signal-orbit--one,
+  .hero-signal .signal-orbit--two,
+  .hero-signal .signal-trace,
+  .hero-signal .signal-trace--slow,
+  .hero-signal .signal-pulse,
+  .hero-signal .signal-sweep {
+    animation: none;
+  }
+}
