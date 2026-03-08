@@ -32,12 +32,6 @@ export default function HomePage() {
       <section className="border-b border-rule pb-16 sm:pb-20">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:items-end lg:gap-12">
           <div className="max-w-3xl space-y-6">
-            <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-              <span>AI</span>
-              <span>Systems</span>
-              <span>Writing</span>
-            </div>
-
             <h1 className="max-w-4xl text-[38px] font-bold leading-[1.02] tracking-[-0.08em] text-ink sm:text-[48px]">
               I build AI systems that work in the real world.
             </h1>
