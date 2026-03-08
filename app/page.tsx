@@ -10,8 +10,8 @@ import { siteConfig, formatDate } from '@/lib/site';
 
 const talks = [
   {
-    label: 'Secret Sauce EP.591 / THE STANDARD PODCAST',
-    href: 'https://soundcloud.com/thestandardpodcast/tss591'
+    label: 'Executive Espresso EP.591 / Claude Code & Cowork',
+    href: 'https://youtu.be/y1-FyGD237M?si=Fg6mTFWiGpGat3Mp'
   },
   {
     label: 'MFA Panel / Slush 2025 debrief / January 2026',
