@@ -32,10 +32,6 @@ export default function HomePage() {
       <section className="border-b border-rule pb-16 sm:pb-20">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:items-end lg:gap-12">
           <div className="max-w-3xl space-y-6">
-            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-muted">
-              {siteConfig.name}
-            </p>
-
             <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
               <span>AI</span>
               <span>Systems</span>
