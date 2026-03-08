@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { ContactCard } from '@/components/contact-card';
 import { Container } from '@/components/container';
 import { HomeSignal } from '@/components/home-signal';
 import { MetadataLine } from '@/components/metadata-line';
@@ -55,7 +56,7 @@ export default function HomePage() {
                 View work
               </Link>
               <a
-                href={`mailto:${siteConfig.email}`}
+                href="#contact"
                 className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
               >
                 Get in touch
@@ -136,19 +137,14 @@ export default function HomePage() {
         </ul>
       </section>
 
-      <section className="border-t border-rule pt-10">
-        <p className="text-[16px] leading-7 text-body">
-          Advisory, speaking, or collaboration{' '}
-          <span aria-hidden="true" className="text-muted">
-            —
-          </span>{' '}
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="text-accent transition-colors duration-200 hover:underline hover:underline-offset-4"
-          >
-            {siteConfig.email}
-          </a>
-        </p>
+      <section id="contact" className="scroll-mt-32 border-t border-rule pt-10">
+        <div className="max-w-reading space-y-5">
+          <SectionHeading>Get in touch</SectionHeading>
+          <p className="text-[16px] leading-7 text-body">
+            If there&apos;s a fit, email is the simplest way to reach me.
+          </p>
+          <ContactCard email={siteConfig.email} />
+        </div>
       </section>
     </Container>
   );
