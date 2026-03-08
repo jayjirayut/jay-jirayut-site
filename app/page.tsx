@@ -63,8 +63,8 @@ export default function HomePage() {
               </a>
             </div>
             <p className="max-w-2xl text-[15px] leading-7 text-body">
-              Not borrowed from the Bay. I care about work with taste, restraint, and enough
-              honesty to survive outside the launch cycle.
+              I care about work with taste, restraint, and enough honesty to survive after the
+              launch cycle.
             </p>
           </div>
 
