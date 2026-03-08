@@ -63,7 +63,7 @@ export default function HomePage() {
               </a>
             </div>
             <p className="max-w-2xl text-[15px] leading-7 text-body">
-              I care about work that stays clear, useful, and honest after launch.
+              I care about work that is useful, honest, and still makes sense after launch.
             </p>
           </div>
 
