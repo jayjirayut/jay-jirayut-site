@@ -3,17 +3,20 @@ import path from 'node:path';
 
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
+import { z } from 'zod';
 
 export type ContentCollection = 'writing' | 'work';
 
-export type ContentFrontmatter = {
-  title: string;
-  date: string;
-  description: string;
-  tags: string[];
-  published: boolean;
-  featured: boolean;
-};
+const contentFrontmatterSchema = z.object({
+  title: z.string(),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Date must be YYYY-MM-DD'),
+  description: z.string(),
+  tags: z.array(z.string()).default([]),
+  published: z.boolean().default(false),
+  featured: z.boolean().default(false)
+});
+
+export type ContentFrontmatter = z.infer<typeof contentFrontmatterSchema>;
 
 export type ContentEntry = ContentFrontmatter & {
   slug: string;
@@ -37,8 +40,10 @@ function readEntry(filePath: string, collection: ContentCollection): ContentEntr
   const { data, content } = matter(source);
   const slug = path.basename(filePath).replace(/\.mdx?$/, '');
 
+  const frontmatter = contentFrontmatterSchema.parse(data);
+
   return {
-    ...(data as ContentFrontmatter),
+    ...frontmatter,
     slug,
     body: content,
     readingTime: readingTime(content).text,
@@ -83,4 +88,23 @@ export function getAdjacentWritingEntries(slug: string) {
     newer: index > 0 ? entries[index - 1] : undefined,
     older: index >= 0 ? entries[index + 1] : undefined
   };
+}
+
+export function getWritingTags() {
+  const entries = getWritingEntries();
+  const tagMap = new Map<string, number>();
+
+  for (const entry of entries) {
+    for (const tag of entry.tags) {
+      tagMap.set(tag, (tagMap.get(tag) ?? 0) + 1);
+    }
+  }
+
+  return Array.from(tagMap.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getWritingEntriesByTag(tag: string) {
+  return getWritingEntries().filter((entry) => entry.tags.includes(tag));
 }

@@ -3,30 +3,40 @@ import Link from 'next/link';
 
 import { Container } from '@/components/container';
 import { MetadataLine } from '@/components/metadata-line';
-import { getWritingEntries } from '@/lib/content';
+import { getWritingEntriesByTag, getWritingTags } from '@/lib/content';
 import { absoluteUrl, formatDate } from '@/lib/site';
 
-export const metadata: Metadata = {
-  title: 'Writing',
-  description: 'Writing on AI, decision-making, and useful technology.',
-  alternates: {
-    canonical: absoluteUrl('/writing')
-  }
+type TagPageProps = {
+  params: Promise<{ tag: string }>;
 };
 
-export default function WritingIndexPage() {
-  const entries = getWritingEntries();
+export function generateStaticParams() {
+  return getWritingTags().map(({ tag }) => ({ tag }));
+}
+
+export async function generateMetadata({ params }: TagPageProps): Promise<Metadata> {
+  const { tag } = await params;
+
+  return {
+    title: `Tagged "${tag}"`,
+    description: `Writing tagged with "${tag}".`,
+    alternates: {
+      canonical: absoluteUrl(`/writing/tags/${tag}`)
+    }
+  };
+}
+
+export default async function TagPage({ params }: TagPageProps) {
+  const { tag } = await params;
+  const entries = getWritingEntriesByTag(tag);
 
   return (
     <Container size="shell" className="space-y-14">
       <header className="max-w-reading space-y-5 border-b border-rule pb-10">
-        <p className="section-kicker">Writing</p>
-        <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[48px]">
-          Writing grounded in real work, not hype.
-        </h1>
-        <p className="max-w-2xl text-[16.5px] leading-8 text-body">
-          Essays on useful AI, making decisions under constraint, and why clarity still matters
-          when the subject gets noisy.
+        <p className="section-kicker">Tag</p>
+        <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[48px]">{tag}</h1>
+        <p className="text-[16.5px] leading-8 text-body">
+          {entries.length} {entries.length === 1 ? 'essay' : 'essays'}
         </p>
       </header>
 
@@ -39,12 +49,6 @@ export default function WritingIndexPage() {
             <MetadataLine items={[formatDate(entry.date), entry.readingTime]} className="pt-1" />
 
             <div className="space-y-3">
-              {entry.featured ? (
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
-                  Start here
-                </p>
-              ) : null}
-
               <Link href={`/writing/${entry.slug}`} className="block">
                 <h2 className="text-[28px] font-semibold leading-[1.08] tracking-[-0.06em] text-ink transition-colors duration-200 hover:text-accent">
                   {entry.title}

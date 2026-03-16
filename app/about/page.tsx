@@ -12,6 +12,12 @@ const principles = [
   "Most claims in my industry are inflated. I won't make them."
 ];
 
+const stillFiguringOut = [
+  'What the right pace looks like when building under constraint.',
+  'How to balance technical ambition with commercial reality.',
+  'What autonomy actually costs.'
+];
+
 export const metadata: Metadata = {
   title: 'About',
   description: 'Background, principles, and context for Jay Jirayut Chatphet.',
@@ -27,8 +33,8 @@ export default function AboutPage() {
         <p className="section-kicker">About</p>
         <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[48px]">About</h1>
         <p className="max-w-2xl text-[16.5px] leading-8 text-body">
-          The short version: I build AI systems where product decisions, technical depth, and
-          execution all have to line up.
+          I build AI systems, write about decisions, and try to live honestly in an industry
+          that does not always reward it.
         </p>
       </header>
 
@@ -36,20 +42,23 @@ export default function AboutPage() {
         <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>Short bio</SectionHeading>
           <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            I&apos;ve spent the last several years building AI and data systems inside a real
-            operating business, with work that had to survive constraints instead of
-            presentations.
+            I build AI systems inside a real operating business in Southeast Asia. The work has
+            to survive messy data, tight budgets, and people who do not care how the model
+            works as long as it helps them do their job. I write about what that kind of work
+            actually teaches you.
           </p>
         </section>
 
         <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>Story</SectionHeading>
-          <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            I built AI and data capability from zero inside a startup environment and stayed long
-            enough to see what real deployment does to theory. The work touched complex operating
-            environments across Southeast Asia. I chose environments where the stakes were real and
-            the feedback loop was unforgiving, even when safer paths were available.
-          </p>
+          <div className="max-w-reading space-y-4 text-[16.5px] leading-8 text-body">
+            <p>
+              I built AI and data capability from zero inside a startup environment and stayed long
+              enough to see what real deployment does to theory. The work touched complex operating
+              environments across Southeast Asia. I chose environments where the stakes were real and
+              the feedback loop was unforgiving, even when safer paths were available.
+            </p>
+          </div>
         </section>
 
         <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-8">
@@ -63,13 +72,26 @@ export default function AboutPage() {
           </ul>
         </section>
 
+        <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-8">
+          <SectionHeading>Still figuring out</SectionHeading>
+          <ul className="space-y-4">
+            {stillFiguringOut.map((item) => (
+              <li key={item} className="text-[16px] leading-7 text-body">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <section className="grid gap-5 border-y border-rule py-8 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>Personal</SectionHeading>
-          <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            Bangkok is home by choice. I care about technology, health, design, music, and systems
-            that actually improve life. I&apos;m trying to build a life with autonomy, not just a
-            career with momentum.
-          </p>
+          <div className="max-w-reading space-y-4 text-[16.5px] leading-8 text-body">
+            <p>
+              Bangkok is home by choice. I care about technology, health, design, music, and systems
+              that actually improve life. I&apos;m trying to build a life with autonomy, not just a
+              career with momentum.
+            </p>
+          </div>
         </section>
       </div>
     </Container>

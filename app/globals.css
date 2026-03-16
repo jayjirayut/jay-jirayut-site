@@ -13,7 +13,7 @@
   --accent-soft: #e7ecfb;
 }
 
-html[data-preview-theme='dark'] {
+html[data-theme='dark'] {
   --bg: #141619;
   --surface: #1b1f24;
   --ink: #f2f1eb;
@@ -52,7 +52,7 @@ body::after {
   z-index: 100;
 }
 
-html[data-preview-theme='dark'] body::after {
+html[data-theme='dark'] body::after {
   opacity: 0.72;
 }
 

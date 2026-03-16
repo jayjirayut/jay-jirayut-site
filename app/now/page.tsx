@@ -4,7 +4,7 @@ import { Container } from '@/components/container';
 import { SectionHeading } from '@/components/section-heading';
 import { absoluteUrl, formatDate } from '@/lib/site';
 
-const updatedAt = '2026-03-08';
+const updatedAt = '2026-03-15';
 
 export const metadata: Metadata = {
   title: 'Now',
@@ -29,18 +29,19 @@ export default function NowPage() {
         <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>What I&apos;m focused on</SectionHeading>
           <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            Building a more durable public body of work around AI systems, decision-making, and
-            why useful technology still beats impressive theatre. I&apos;m also getting this site
-            into a shape that I&apos;d feel comfortable sending to smart people without explaining
-            it first.
+            Writing more honestly about what building AI actually looks like — the failures, the
+            constraints, the decisions that haunt you. Getting this site to a place where it
+            feels like me, not a pitch deck. Series A fundraising is ongoing; the work continues
+            regardless.
           </p>
         </section>
 
         <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>What I&apos;m exploring</SectionHeading>
           <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            How AI products work after the demo. What makes system design trustworthy in ambiguous
-            environments. How to build a career with more autonomy and less image management.
+            How to tell the truth about professional work without it becoming a confessional.
+            What autonomy actually requires beyond saying you want it. How AI products survive
+            after the demo — and what to do when they don&apos;t.
           </p>
         </section>
 
@@ -48,7 +49,7 @@ export default function NowPage() {
           <SectionHeading>What I&apos;m reading / listening to</SectionHeading>
           <p className="max-w-reading text-[16.5px] leading-8 text-body">
             Long-form essays on technology and institutions. Design writing that values simplicity.
-            Music that helps me think in clean lines instead of noise.
+            Music that helps me think clearly.
           </p>
         </section>
       </div>

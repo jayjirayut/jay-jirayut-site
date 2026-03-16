@@ -36,8 +36,8 @@ export default function HomePage() {
               I build AI systems that work in the real world.
             </h1>
             <p className="max-w-2xl text-[18px] leading-8 text-body">
-              Based in Bangkok. I write about building AI, making better decisions, and
-              technology people can actually use.
+              Based in Bangkok. I think about technology, decisions, and building a life with
+              autonomy.
             </p>
             <div className="lg:hidden">
               <HomeSignal />
@@ -75,10 +75,8 @@ export default function HomePage() {
 
       <section className="max-w-reading">
         <p className="text-[16.5px] leading-8 text-body">
-          I&apos;ve spent the last several years building AI and data systems inside a real
-          operating business, where the work has to survive ambiguity, constraints, and
-          reality. I care about clear thinking, useful AI, and decisions that still make sense
-          after the demo ends.
+          I build AI systems where the work has to survive ambiguity, constraints, and
+          reality. This site is where I share what I learn along the way.
         </p>
       </section>
 
