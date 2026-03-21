@@ -22,11 +22,10 @@ export default function WritingIndexPage() {
       <header className="max-w-reading space-y-5 border-b border-rule pb-10">
         <p className="section-kicker">Writing</p>
         <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[48px]">
-          Writing grounded in real work, not hype.
+          Writing from the part of the work that has to survive reality.
         </h1>
         <p className="max-w-2xl text-[16.5px] leading-8 text-body">
-          Essays on useful AI, making decisions under constraint, and why clarity still matters
-          when the subject gets noisy.
+          Essays on useful AI, hard decisions, and what changes once a system has real users.
         </p>
       </header>
 

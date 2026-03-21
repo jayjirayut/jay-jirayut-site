@@ -6,7 +6,7 @@ import { absoluteUrl } from '@/lib/site';
 
 const principles = [
   'Useful beats impressive.',
-  'How you decide matters when the data is incomplete.',
+  'Good decisions matter most when the data is incomplete.',
   'AI should make people more human, not less.',
   'Clarity is a competitive advantage.',
   "Most claims in my industry are inflated. I won't make them."
@@ -33,8 +33,8 @@ export default function AboutPage() {
         <p className="section-kicker">About</p>
         <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[48px]">About</h1>
         <p className="max-w-2xl text-[16.5px] leading-8 text-body">
-          I build AI systems, write about decisions, and try to live honestly in an industry
-          that does not always reward it.
+          I build AI systems, write about real-world technology, and try to stay honest about
+          what the work actually requires.
         </p>
       </header>
 
@@ -42,10 +42,9 @@ export default function AboutPage() {
         <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>Short bio</SectionHeading>
           <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            I build AI systems inside a real operating business in Southeast Asia. The work has
-            to survive messy data, tight budgets, and people who do not care how the model
-            works as long as it helps them do their job. I write about what that kind of work
-            actually teaches you.
+            I build AI systems inside a real operating business in Southeast Asia. Most of the
+            work sits where technical ambition meets budgets, operations, and the cost of being
+            wrong. I write about what that kind of environment teaches you.
           </p>
         </section>
 
@@ -53,10 +52,10 @@ export default function AboutPage() {
           <SectionHeading>Story</SectionHeading>
           <div className="max-w-reading space-y-4 text-[16.5px] leading-8 text-body">
             <p>
-              I built AI and data capability from zero inside a startup environment and stayed long
-              enough to see what real deployment does to theory. The work touched complex operating
-              environments across Southeast Asia. I chose environments where the stakes were real and
-              the feedback loop was unforgiving, even when safer paths were available.
+              I spent more than six years building AI and data capability from zero inside a startup
+              environment. That meant framing problems, hiring people, building systems, and learning
+              which ideas survive contact with operations. I stayed in environments where the feedback
+              was real and the consequences were visible, even when safer paths were available.
             </p>
           </div>
         </section>
@@ -88,8 +87,8 @@ export default function AboutPage() {
           <div className="max-w-reading space-y-4 text-[16.5px] leading-8 text-body">
             <p>
               Bangkok is home by choice. I care about technology, health, design, music, and systems
-              that actually improve life. I&apos;m trying to build a life with autonomy, not just a
-              career with momentum.
+              that make life better in ordinary ways. I want a life with more autonomy, not just a
+              career with more momentum.
             </p>
           </div>
         </section>

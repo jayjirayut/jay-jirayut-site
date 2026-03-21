@@ -25,6 +25,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/writing/tags',
+        destination: '/writing',
+        permanent: true
+      },
+      {
+        source: '/writing/tags/:tag',
+        destination: '/writing',
+        permanent: true
+      },
+      {
         source: '/writing/what-real-world-ai-work-taught-me-about-judgment',
         destination: '/writing/what-real-world-ai-work-taught-me-about-decision-making',
         permanent: true

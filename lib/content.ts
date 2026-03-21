@@ -89,22 +89,3 @@ export function getAdjacentWritingEntries(slug: string) {
     older: index >= 0 ? entries[index + 1] : undefined
   };
 }
-
-export function getWritingTags() {
-  const entries = getWritingEntries();
-  const tagMap = new Map<string, number>();
-
-  for (const entry of entries) {
-    for (const tag of entry.tags) {
-      tagMap.set(tag, (tagMap.get(tag) ?? 0) + 1);
-    }
-  }
-
-  return Array.from(tagMap.entries())
-    .map(([tag, count]) => ({ tag, count }))
-    .sort((a, b) => b.count - a.count);
-}
-
-export function getWritingEntriesByTag(tag: string) {
-  return getWritingEntries().filter((entry) => entry.tags.includes(tag));
-}

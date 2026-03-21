@@ -22,12 +22,11 @@ export default function WorkIndexPage() {
       <header className="max-w-reading space-y-5 border-b border-rule pb-10">
         <p className="section-kicker">Work</p>
         <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[48px]">
-          Selected work, kept deliberately high-level.
+          Selected notes on building under constraint.
         </h1>
         <p className="text-[16.5px] leading-8 text-body">
-          I&apos;m most useful when the work is ambiguous, cross-functional, technical, and
-          commercially real. This section focuses on how decisions get made and what principles
-          guide the work, not confidential specifics.
+          These notes stay high-level on purpose. The point is how I think, where I was wrong, and
+          what changed after the work met reality.
         </p>
       </header>
 
@@ -36,7 +35,7 @@ export default function WorkIndexPage() {
           <article key={entry.slug} className="surface-panel flex h-full flex-col justify-between p-6 sm:p-7">
             <div className="space-y-5">
               <div className="flex items-center justify-between gap-4">
-                <MetadataLine items={[formatDate(entry.date), ...entry.tags.slice(0, 2)]} />
+                <MetadataLine items={[formatDate(entry.date)]} />
                 <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
                   0{index + 1}
                 </span>

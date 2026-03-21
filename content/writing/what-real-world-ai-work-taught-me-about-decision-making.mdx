@@ -1,7 +1,7 @@
 ---
 title: "What Real-World AI Work Taught Me About Decision-Making"
 date: "2026-02-08"
-description: "The most important decisions usually happen before the model, around the model, and after the model."
+description: "Most of the important decisions happen before the model ships and after people start using it."
 tags: ["decisions", "ai"]
 published: true
 featured: false
@@ -9,15 +9,15 @@ featured: false
 
 Working on AI inside a real operating business changed how I think about decision-making.
 
-Not because the technical questions stopped mattering. They still matter. But over time it became obvious that the biggest mistakes were rarely caused by a lack of model sophistication. They came from weak framing, weak priorities, and weak assumptions about what the system was actually being asked to do.
+Not because the technical questions stopped mattering. They still matter. But over time it became obvious that the biggest mistakes were rarely caused by weak modeling alone. They came from weak framing, weak priorities, and weak assumptions about what the system was actually being asked to do.
 
 The important decisions happen before the build starts.
 
-They show up in deciding whether a problem is stable enough to model. Whether the data means what people think it means. Whether the organization is ready to act on the output. Whether the effort is solving something commercially real or just making smart people feel modern.
+They show up in deciding whether a problem is stable enough to model. Whether the data means what people think it means. Whether the organization is ready to act on the output. Whether the effort is solving something commercially real or just helping smart people feel current.
 
-## Most leverage is upstream
+## Problem selection is the first real decision
 
-There is a strong temptation in AI work to treat implementation as the center of gravity. I understand that instinct. Building is concrete. It creates momentum. It is easier to talk about.
+There is a strong temptation in AI work to treat implementation as the center of gravity. Building is concrete. It creates momentum. It is easier to talk about than ambiguity.
 
 But a surprising amount of leverage lives upstream.
 
@@ -25,25 +25,47 @@ Choosing the wrong problem cleanly is still choosing the wrong problem.
 
 A technically elegant system can still fail if it enters a workflow that nobody trusts, depends on signals that drift too fast, or solves an edge problem while the core operation stays broken.
 
-The better I got at this work, the less I wanted to start with the model.
+The better I got at this work, the less I wanted to start with the model and the more I wanted to ask a smaller set of questions first.
 
-## Good decision-making is often subtraction
+What decision is this supposed to improve?
 
-Another lesson is that good decisions usually remove things.
+Who changes behavior if the output is good?
 
-It removes unnecessary scope.
+What is the cost of being wrong?
 
-It removes claims you cannot defend.
+What happens if nothing changes after we build it?
 
-It removes dashboards that look useful but do not change decisions.
+Those questions do not kill good projects. They protect them from being built on wishful thinking.
 
-It removes automation in places where the cost of being wrong is higher than the cost of waiting.
+## Trust is built outside the model
 
-This can feel unambitious if you are optimizing for surface area. It looks different if you are optimizing for trust.
+A lot of trust is decided outside the model itself.
 
-## The real test
+Trust comes from whether the output arrives at the right moment, whether the user understands what they are looking at, whether the system is honest about uncertainty, and whether someone is clearly responsible when things go wrong.
 
-I learned to care less about whether a system feels intelligent and more about whether it behaves responsibly under pressure.
+You can build a strong model and still lose the user if the surrounding system feels careless.
+
+This was one of the more important changes in how I think. I used to assume that better output would naturally create adoption. Now I think adoption is usually downstream of better framing, better incentives, and better communication.
+
+If people cannot tell when the system should be trusted, they eventually stop trusting it altogether.
+
+## Good decisions are often subtraction
+
+Another lesson is that good decisions often remove things.
+
+They remove unnecessary scope.
+
+They remove claims you cannot defend.
+
+They remove dashboards that look impressive but do not change any action.
+
+They remove automation in places where the cost of being wrong is higher than the cost of waiting.
+
+This can look conservative if you are optimizing for surface area. It looks different if you are optimizing for trust.
+
+## The decisions that age well
+
+I have learned to care less about whether a system feels intelligent and more about whether it behaves responsibly under pressure.
 
 Does it help someone act with more clarity?
 
@@ -53,8 +75,6 @@ Does it reduce waste without creating hidden risk?
 
 Does it make the surrounding team stronger instead of more dependent?
 
-That is where the real decision-making happens.
-
-Not in sounding smart after the fact. In making choices that still make sense when the environment pushes back.
+Those are the decisions that age well. Not the ones that sound impressive in the room. The ones that still make sense once the environment starts pushing back.
 
 That is the part of AI work I respect most.

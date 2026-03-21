@@ -69,7 +69,7 @@ export default async function WorkDetailPage({ params }: WorkPageProps) {
     <Container size="shell" className="space-y-12">
       <header className="max-w-reading space-y-6 border-b border-rule pb-10">
         <p className="section-kicker">Work note</p>
-        <MetadataLine items={[formatDate(entry.date), ...entry.tags]} />
+        <MetadataLine items={[formatDate(entry.date)]} />
         <h1 className="text-[40px] font-bold leading-[1.02] tracking-[-0.08em] text-ink sm:text-[48px]">
           {entry.title}
         </h1>

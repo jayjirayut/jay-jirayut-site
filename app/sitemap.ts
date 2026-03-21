@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-import { getWorkEntries, getWritingEntries, getWritingTags } from '@/lib/content';
+import { getWorkEntries, getWritingEntries } from '@/lib/content';
 import { absoluteUrl } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,10 +19,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(entry.date)
   }));
 
-  const tagRoutes = getWritingTags().map(({ tag }) => ({
-    url: absoluteUrl(`/writing/tags/${tag}`),
-    lastModified: new Date()
-  }));
-
-  return [...staticRoutes, ...writingRoutes, ...workRoutes, ...tagRoutes];
+  return [...staticRoutes, ...writingRoutes, ...workRoutes];
 }

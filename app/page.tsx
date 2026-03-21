@@ -36,8 +36,7 @@ export default function HomePage() {
               I build AI systems that work in the real world.
             </h1>
             <p className="max-w-2xl text-[18px] leading-8 text-body">
-              Based in Bangkok. I think about technology, decisions, and building a life with
-              autonomy.
+              Based in Bangkok. I write about building AI that people can actually use.
             </p>
             <div className="lg:hidden">
               <HomeSignal />
@@ -75,8 +74,10 @@ export default function HomePage() {
 
       <section className="max-w-reading">
         <p className="text-[16.5px] leading-8 text-body">
-          I build AI systems where the work has to survive ambiguity, constraints, and
-          reality. This site is where I share what I learn along the way.
+          For the last several years, I have been building AI and data systems inside a real
+          operating business. That means messy data, shifting priorities, and work that has to
+          keep making sense after the demo. This site is where I write about what that kind of
+          environment teaches you.
         </p>
       </section>
 
@@ -119,9 +120,13 @@ export default function HomePage() {
 
         <div className="grid gap-4 md:grid-cols-2">
           {work.map((entry) => (
-            <article key={entry.slug} className="surface-panel flex h-full flex-col justify-between p-6" data-static="true">
+            <article
+              key={entry.slug}
+              className="surface-panel flex h-full flex-col justify-between p-6"
+              data-static="true"
+            >
               <div className="space-y-3">
-                <MetadataLine items={[formatDate(entry.date), ...entry.tags.slice(0, 1)]} />
+                <MetadataLine items={[formatDate(entry.date)]} />
                 <h3 className="text-[21px] font-semibold tracking-[-0.04em] text-ink">
                   {entry.title}
                 </h3>

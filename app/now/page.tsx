@@ -21,7 +21,7 @@ export default function NowPage() {
         <p className="section-kicker">Last updated {formatDate(updatedAt)}</p>
         <h1 className="text-[40px] font-bold tracking-[-0.08em] text-ink sm:text-[48px]">Now</h1>
         <p className="max-w-2xl text-[16.5px] leading-8 text-body">
-          A lightweight snapshot of what I&apos;m paying attention to. Updated when it feels useful.
+          A quick snapshot of what I&apos;m focused on right now.
         </p>
       </header>
 
@@ -29,27 +29,26 @@ export default function NowPage() {
         <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>What I&apos;m focused on</SectionHeading>
           <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            Writing more honestly about what building AI actually looks like — the failures, the
-            constraints, the decisions that haunt you. Getting this site to a place where it
-            feels like me, not a pitch deck. Series A fundraising is ongoing; the work continues
-            regardless.
+            Publishing more often. I want this site to reflect the part of AI work that is slow,
+            messy, and commercially real, not just the polished version. I am also trying to get
+            the site to a point where I can keep using it without redesigning it every week.
           </p>
         </section>
 
         <section className="grid gap-5 border-t border-rule pt-8 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>What I&apos;m exploring</SectionHeading>
           <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            How to tell the truth about professional work without it becoming a confessional.
-            What autonomy actually requires beyond saying you want it. How AI products survive
-            after the demo — and what to do when they don&apos;t.
+            How to write about professional work without sounding vague or defensive. What autonomy
+            actually requires in money, time, and tradeoffs. Which AI products stay useful once the
+            excitement fades.
           </p>
         </section>
 
         <section className="grid gap-5 border-y border-rule py-8 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8">
           <SectionHeading>What I&apos;m reading / listening to</SectionHeading>
           <p className="max-w-reading text-[16.5px] leading-8 text-body">
-            Long-form essays on technology and institutions. Design writing that values simplicity.
-            Music that helps me think clearly.
+            Long-form writing on technology, institutions, health, and design. Music that helps me
+            slow down and think.
           </p>
         </section>
       </div>
